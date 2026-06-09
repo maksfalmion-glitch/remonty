@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Remontowe i Wykończeniowe</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Nawigacja */
+        nav {
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #111111;
+        }
+
+        .nav-phone {
+            font-weight: 600;
+            color: #0052cc;
+            text-decoration: none;
+        }
+
+        /* Sekcja Główna */
+        .hero {
+            padding: 120px 0 100px 0;
+            background: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #111111;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #0052cc;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666666;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #111111;
+            color: #ffffff;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #0052cc;
+        }
+
+        /* Sekcja Usług */
+        .services {
+            padding: 100px 0;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #111111;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #eee;
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #0052cc;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #111111;
+        }
+
+        .card p {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        /* Sekcja Atutów */
+        .features {
+            padding: 100px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item h4 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0052cc;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #666666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Kontakt */
+        .contact {
+            padding: 100px 0;
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #999999;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-details a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-details a:hover {
+            color: #0052cc;
+        }
+
+        .contact-sub {
+            font-size: 0.9rem;
+            color: #666666;
+        }
+
+        /* Stopka */
+        footer {
+            padding: 40px 0;
+            background: #111111;
+            color: #555555;
+            font-size: 0.85rem;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">Usługi Techniczno-Budowlane</div>
+            <a href="tel:+48000000000" class="nav-phone">+48 000 000 000</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Precyzyjne wykończenia wnętrz i realizacje <span>na czas.</span></h1>
+            <p>Zajmujemy się profesjonalnym układaniem płytek, paneli, montażem mebli oraz pełnym wsparciem technicznym w lokalach mieszkalnych i biurowych.</p>
+            <a href="#kontakt" class="btn">Zapytaj o wycenę</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Zakres prac</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Układanie płytek</h3>
+                    <p>Prace glazurnicze w łazienkach, kuchniach i na korytarzach. Precyzyjne docinanie krawędzi oraz przygotowanie podłoża.</p>
+                </div>
+                <div class="card">
+                    <h3>Podłogi drewniane i laminowane</h3>
+                    <p>Montaż paneli podłogowych, desek oraz listew przypodłogowych. Doradztwo w doborze odpowiednich podkładów izolacyjnych.</p>
+                </div>
+                <div class="card">
+                    <h3>Montaż systemów meblowych</h3>
+                    <p>Składanie i instalacja mebli kuchennych, pokojowych oraz szaf wnękowych dowolnych producentów.</p>
+                </div>
+                <div class="card">
+                    <h3>Prace remontowe</h3>
+                    <p>Szpachlowanie, malowanie powierzchni, drobne zabudowy z płyt gipsowo-kartonowych oraz modernizacja wnętrz.</p>
+                </div>
+                <div class="card">
+                    <h3>Wsparcie techniczne</h3>
+                    <p>Usuwanie bieżących awarii domowych, montaż oświetlenia, elementów dekoracyjnych oraz armatury sanitarnej.</p>
+                </div>
+                <div class="card">
+                    <h3>Przygotowanie inwestycji</h3>
+                    <p>Zabezpieczenie lokalu przed pracami, odbiór materiałów od dostawców oraz pozostawienie pełnego porządku po zakończeniu realizacji.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>01</h4>
+                    <p>Stały kosztorys bez niespodzianek</p>
+                </div>
+                <div class="feature-item">
+                    <h4>02</h4>
+                    <p>Ustalone terminy jako priorytet</p>
+                </div>
+                <div class="feature-item">
+                    <h4>03</h4>
+                    <p>Profesjonalne zaplecze narzędziowe</p>
+                </div>
+                <div class="feature-item">
+                    <h4>04</h4>
+                    <p>Czystość na każdym etapie prac</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <h2>Porozmawiajmy o Twoim projekcie</h2>
+            <p>Prześlij nam założenia lub zadzwoń, aby ustalić bezpłatny termin oględzin i wyceny.</p>
+            <div class="contact-details">
+                <a href="tel:+48000000000">+48 000 000 000</a>
+            </div>
+            <div class="contact-details" style="font-size: 1.4rem; font-weight: 500; margin-bottom: 40px;">
+                <a href="mailto:kontakt@twojadomena.pl" style="color: #0052cc;">kontakt@twojadomena.pl</a>
+            </div>
+            <div class="contact-sub">
+                Działamy na terenie województwa i okolic. Wyceny przygotowujemy w ciągu 24 godzin.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Usługi Techniczno-Budowlane. Wszystkie prawa zastrzeżone.
+        </div>
+    </footer>
+
+</body>
+</html>
